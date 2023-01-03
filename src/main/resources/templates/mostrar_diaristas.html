@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html th:replace="~{base :: layout (~{::main})}">
+
+<head>
+    <title>Listar Diaristas</title>
+</head>
+
+<body>
+    
+
+    <main >
+        <h1 class="text-center">Funcionarios</h1>
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr class="table-info">
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="diarista : ${diaristas}">
+                    <th th:text="${diarista.id}"></th>
+                    <th>
+                        <a th:href="@{/diaristas/{id} (id=${diarista.id})}" th:text="${diarista.nome}"></a>
+                    </th>
+                    <th th:text="${diarista.telefone}"></th>
+                    <th th:text="${diarista.endereco}"></th>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html th:replace="~{base :: layout (~{::main})}" >
+
+<body>
+    
+   <main>
+        <h1>Detalhes do Funcionario</h1>
+        <p>Nome: <span th:text="${diaristas.nome}"></span></p>
+        <p>Telefone:<span th:text="${diaristas.telefone}"></span></p>
+        <p>Endereço:<span th:text="${diaristas.endereco}"></span></p>
+    </main>
+</body>
+</html>
